@@ -12,6 +12,7 @@ import java. util.Scanner;
             // taking input
             Scanner sc = new Scanner(System.in);
 // 		taking the currency as input
+            //gfg
             System.out.println("Choose the currency");
 
             int choice = sc.nextInt();
