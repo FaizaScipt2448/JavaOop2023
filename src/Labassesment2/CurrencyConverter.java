@@ -8,6 +8,7 @@ import java. util.Scanner;
             System.out.println("1 Ruppe");
             System.out.println("2 Dollar");
             System.out.println("3 Euro");
+            //
             // taking input
             Scanner sc = new Scanner(System.in);
 // 		taking the currency as input
