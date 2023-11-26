@@ -24,7 +24,6 @@ public class Items extends Menu {
         this.origin = origin;
     }
 
-
     public int getCalories() {
         return calories;
     }
@@ -40,9 +39,9 @@ public class Items extends Menu {
 
     public void proudectInfo()
     {
-        System.out.print("Enter ID of proudect: ");
+        System.out.print("Enter ID of product: ");
         int m = input.nextInt();
-        System.out.println("\n********************* Proudect Info *********************");
+        System.out.println("\n********************* Product Info *********************");
         switch(m)
         {
             case 1 : //Mocha

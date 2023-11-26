@@ -12,9 +12,6 @@ public class JavaCafe {
         Items i1 = new Items();
         Products();
 
-        // Load order history from file at the beginning
-        orderHistory = OrderHistoryFileHandler.readOrderHistory();
-
         int choice;
         System.out.println("*************************** Java Cafe ****************************");
         do
@@ -94,7 +91,7 @@ public class JavaCafe {
                 {
                     e1.printBill();
                     // Save the order history after printing the bill
-                    OrderHistoryFileHandler.writeOrderHistory(orderHistory);
+                   // OrderHistoryFileHandler.writeOrderHistory(orderHistory);
                     break;
                 }
 

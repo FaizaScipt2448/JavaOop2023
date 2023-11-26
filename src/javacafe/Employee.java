@@ -1,6 +1,4 @@
 
-
-
 package javacafe;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,19 +7,23 @@ public class Employee extends Staff {
     Scanner input = new Scanner(System.in);
     private int count = 0;
 
+    private Menu[] orderList;
+
+
+
 
 
     public void displayMenu(ArrayList<Menu> products)
     {
         System.out.println("********* Menu *********");
         System.out.println("ID    NAME      PRICE");
-        for (Menu type : products) //iterating ArrayList
+        for (Menu type : products)
         {
             System.out.println(type.getId() + "     " + type.getName() + "     " + type.getPrice());
         }
     }
 
-    public void addOrder() //Method for Add Order
+    public void addOrder()
     {
         int o;
 
@@ -65,7 +67,7 @@ public class Employee extends Staff {
                         break;
                     }
 
-                    case 2 : //Latte Type
+                    case 2 :
                     {
                         System.out.print("Enter Latte Coffee quantity : ");
                         int quantity = input.nextInt();
@@ -75,7 +77,7 @@ public class Employee extends Staff {
                         break;
                     }
 
-                    case 3 : // Black Type
+                    case 3 :
                     {
                         System.out.print("Enter Black Coffee quantity : ");
                         int quantity = input.nextInt();
@@ -102,7 +104,7 @@ public class Employee extends Staff {
                 n = input.nextInt();
                 switch (n)
                 {
-                    case 1 ://Bagel Type
+                    case 1:
                     {
                         System.out.print("Enter Bagel quantity : ");
                         int quantity = input.nextInt();
@@ -112,7 +114,7 @@ public class Employee extends Staff {
                         break;
                     }
 
-                    case 2 : //Bread Type
+                    case 2 :
                     {
                         System.out.print("Enter Bread quantity : ");
                         int quantity = input.nextInt();
@@ -246,15 +248,18 @@ public class Employee extends Staff {
         return  subPrice;
     }
 
+    public Menu[] getOrderList() {
+        return orderList;
+    }
     public void printBill()
     {
         double totalPrice = calcSubPrice() + (calcSubPrice() * 0.15);
-        System.out.println("*********************** Bill **************************");
+        System.out.println("****************** Bill *********************");
         System.out.println("Sub Price: " + calcSubPrice() + " SAR");
         System.out.println("Tax: " + "15%" );
         System.out.println("Total Price: " +  totalPrice + " SAR");
         displayOrder();
-        OrderHistoryFileHandler.writeOrderHistory(orderList);
+
     }
 
 }
