@@ -13,9 +13,10 @@ public class JavaCafe {
         Products();
 
         int choice;
-        System.out.println("*************************** Java Cafe ****************************");
+        System.out.println(" Java Cafe ");
         do
         {
+
             choicesMessage();
             choice = input.nextInt();
 
@@ -185,7 +186,9 @@ public class JavaCafe {
         System.out.println("[1]Yes      [2]No");
         System.out.print("Choice: ");
     }
+
 }
+
 
 
 

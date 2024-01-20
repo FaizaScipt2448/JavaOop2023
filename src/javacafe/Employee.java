@@ -8,9 +8,10 @@ public class Employee extends Staff {
     private int count = 0;
 
     private Menu[] orderList;
+ public Employee() {
+     orderList = new Menu[100];
 
-
-
+ }
 
 
     public void displayMenu(ArrayList<Menu> products)
@@ -83,6 +84,7 @@ public class Employee extends Staff {
                         int quantity = input.nextInt();
                         Coffee c = new Coffee("Black", 5 ,quantity);
                         orderList[count] = c;
+                        orderList= new Menu[100];
                         count++;
                         break;
 
@@ -120,6 +122,9 @@ public class Employee extends Staff {
                         int quantity = input.nextInt();
                         Bakery b = new Bakery("Bread", 6 ,quantity);
                         orderList[count] = b;
+                       ArrayList<Menu> orderList = new ArrayList<>();
+
+
                         count++;
                         break;
                     }

@@ -1,7 +1,5 @@
 package Casestudy;
 
-
-
     public class AudioDevices extends Electronics{
 
         AudioDevices(String name, double price, int stockQuantity, double taxationSpecifics,ProductType category, String powerConsumption, Date warranty){

@@ -1,6 +1,5 @@
 package Casestudy;
 
-
     public class Laptop extends Electronics{
         String processorType;
         int ramSize;
